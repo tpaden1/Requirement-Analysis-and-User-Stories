@@ -20,6 +20,9 @@ app.add_middleware(
 
 model_loader.index()
 indexRoute.load_routes(app)
+@app.get("/")
+def root():
+    return {"message": "Welcome to the Sandwich Maker API!"}
 
 
 if __name__ == "__main__":
